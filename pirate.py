@@ -1,4 +1,4 @@
-"""Usage: python {} OPTION [PARAMETER..]
+"""Usage: python {} OPTION [PARAMETER]...
 
 Available options:
   -d ID      Download the torrent at ID.
@@ -47,7 +47,7 @@ def find_item(id):
     for item in items():
         if item.id == id:
             return item
-    raise ItemError('Could not find an item at id {}'.format(id))
+    raise ItemError('Could not find an item at id {}.'.format(id))
 
 def print_help():
     print(__doc__.format(sys.argv[0]))
